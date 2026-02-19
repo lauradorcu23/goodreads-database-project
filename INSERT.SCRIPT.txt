@@ -1,0 +1,229 @@
+
+--utilizatori
+INSERT INTO Utilizatori (nume) VALUES('Anna Grey');
+INSERT INTO Utilizatori (nume) VALUES('Mihaela Munte');
+INSERT INTO Utilizatori (nume) VALUES('Gloria Iones');
+
+--profil utilizatori
+INSERT INTO Profil_utilizatori (username, email, id_utilizator)
+VALUES ( 'anna.g','annagrey@gmail.com',
+  (SELECT id_utilizator FROM Utilizatori WHERE nume = 'Anna Grey')
+);
+
+INSERT INTO Profil_utilizatori (username, email, id_utilizator)
+VALUES ( 'mihaBooks','mihaelamunte@yahoo.com',
+  (SELECT id_utilizator FROM Utilizatori WHERE nume = 'Mihaela Munte')
+);
+
+INSERT INTO Profil_utilizatori (username, email, id_utilizator)
+VALUES ( 'gloria10','gloria.i@yahpp.com',
+  (SELECT id_utilizator FROM Utilizatori WHERE nume = 'Gloria Iones')
+);
+
+--autori
+INSERT INTO Autori (nume) VALUES('Cella Serghi');
+INSERT INTO Autori (nume) VALUES('Sarah J Maas');
+INSERT INTO Autori (nume) VALUES('Stephen King');
+INSERT INTO Autori (nume) VALUES('Ruta Sepetys');
+INSERT INTO Autori (nume) VALUES('Freida McFadden');
+
+--genuri
+INSERT INTO Genuri (denumire_gen, descriere) VALUES ('Fantasy', 'Carti cu elemente magice.');
+INSERT INTO Genuri (denumire_gen) VALUES ('Horror' );
+INSERT INTO Genuri (denumire_gen) VALUES ('Clasice' );
+INSERT INTO Genuri (denumire_gen, descriere) VALUES ('Thriller', 'Carti cu elemente de suspans si mister');
+INSERT INTO Genuri (denumire_gen) VALUES ('Fictiune istorica' )
+
+--carti
+INSERT INTO Carti (titlu_carte, data_publicare, nr_pagini, id_autor, id_gen, editura)
+VALUES ('Panza de paianjen',DATE '1938-01-01', 396,
+  (SELECT id_autor FROM Autori WHERE nume = 'Cella Serghi'),
+  (SELECT id_gen FROM Genuri WHERE denumire_gen = 'Clasice'),
+  'Litera'
+);
+
+INSERT INTO Carti (titlu_carte, data_publicare, nr_pagini, id_autor, id_gen, editura)
+VALUES ( 'Cartea Mironei',DATE '1965-01-01',396,
+  (SELECT id_autor FROM Autori WHERE nume = 'Cella Serghi'),
+  (SELECT id_gen FROM Genuri WHERE denumire_gen = 'Clasice'),
+  'Litera'
+);
+INSERT INTO Carti (titlu_carte, data_publicare, nr_pagini, id_autor, id_gen, editura)
+VALUES ( 'Printre tonuri cenusii',DATE '2011-03-22', 320,
+  (SELECT id_autor FROM Autori WHERE nume = 'Ruta Sepetys'),
+  (SELECT id_gen FROM Genuri WHERE denumire_gen = 'Fictiune istorica'),
+  'Epica'
+);
+
+INSERT INTO Carti (titlu_carte, data_publicare, nr_pagini, id_autor, id_gen, editura)
+VALUES ('Sfarsitul Soaptelor. Decembrie 1989',DATE '2022-02-01',368,
+  (SELECT id_autor FROM Autori WHERE nume = 'Ruta Sepetys'),
+  (SELECT id_gen FROM Genuri WHERE denumire_gen = 'Fictiune istorica'),
+  'Epica'
+);
+
+INSERT INTO Carti (titlu_carte, data_publicare, nr_pagini, id_autor, id_gen, editura)
+VALUES ('Regatul spinilor si al trandafirilor',DATE '2015-05-05',480,
+  (SELECT id_autor FROM Autori WHERE nume = 'Sarah J Maas'),
+  (SELECT id_gen FROM Genuri WHERE denumire_gen = 'Fantasy'),
+  'RAO'
+);
+
+INSERT INTO Carti (titlu_carte, data_publicare, nr_pagini, id_autor, id_gen, editura)
+VALUES (
+  'Orasul Semilunii. Casa Pamantului si a Sangelui', DATE '2020-03-03',928,
+  (SELECT id_autor FROM Autori WHERE nume = 'Sarah J Maas'),
+  (SELECT id_gen FROM Genuri WHERE denumire_gen = 'Fantasy'),
+  'Litera'
+);
+
+INSERT INTO Carti (titlu_carte, data_publicare, nr_pagini, id_autor, id_gen, editura)
+VALUES ( 'Cimitirul Animalelor', DATE '1983-11-04', 496,
+  (SELECT id_autor FROM Autori WHERE nume = 'Stephen King'),
+  (SELECT id_gen FROM Genuri WHERE denumire_gen = 'Horror'),
+  'Nemira'
+);
+
+INSERT INTO Carti (titlu_carte, data_publicare, nr_pagini, id_autor, id_gen, editura)
+VALUES ('Menajera',DATE '2022-04-21', 384,
+  (SELECT id_autor FROM Autori WHERE nume = 'Freida McFadden'),
+  (SELECT id_gen FROM Genuri WHERE denumire_gen = 'Thriller'),
+  'Bookzone'
+);
+
+--TBR
+INSERT INTO TBR (id_carte, id_utilizator)
+VALUES (
+  (SELECT id_carte FROM Carti WHERE titlu_carte = 'Sfarsitul Soaptelor. Decembrie 1989'),
+  (SELECT id_utilizator FROM Utilizatori WHERE nume = 'Mihaela Munte')
+);
+
+INSERT INTO TBR (id_carte, id_utilizator)
+VALUES (
+  (SELECT id_carte FROM Carti WHERE titlu_carte = 'Panza de paianjen'),
+  (SELECT id_utilizator FROM Utilizatori WHERE nume = 'Anna Grey')
+);
+
+INSERT INTO TBR (id_carte, id_utilizator)
+VALUES (
+  (SELECT id_carte FROM Carti WHERE titlu_carte = 'Sfarsitul Soaptelor. Decembrie 1989'),
+  (SELECT id_utilizator FROM Utilizatori WHERE nume = 'Anna Grey')
+);
+
+INSERT INTO TBR (id_carte, id_utilizator)
+VALUES (
+  (SELECT id_carte FROM Carti 
+   WHERE titlu_carte = 'Orasul Semilunii. Casa Pamantului si a Sangelui'),
+  (SELECT id_utilizator FROM Utilizatori WHERE nume = 'Anna Grey')
+);
+
+INSERT INTO TBR (id_carte, id_utilizator)
+VALUES (
+  (SELECT id_carte FROM Carti WHERE titlu_carte = 'Printre tonuri cenusii'),
+  (SELECT id_utilizator FROM Utilizatori WHERE nume = 'Gloria Iones')
+);
+
+INSERT INTO TBR (id_carte, id_utilizator)
+VALUES (
+  (SELECT id_carte FROM Carti WHERE titlu_carte = 'Cimitirul Animalelor'),
+  (SELECT id_utilizator FROM Utilizatori WHERE nume = 'Mihaela Munte')
+);
+
+--Citite
+-- + stergere din TBR daca exista
+
+DELETE FROM TBR
+WHERE id_utilizator = (SELECT id_utilizator FROM Utilizatori WHERE nume = 'Mihaela Munte')
+  AND id_carte = (SELECT id_carte FROM Carti WHERE titlu_carte = 'Orasul Semilunii. Casa Pamantului si a Sangelui');
+
+INSERT INTO Citite (id_utilizator, id_carte)
+VALUES (
+  (SELECT id_utilizator FROM Utilizatori WHERE nume = 'Mihaela Munte'),
+  (SELECT id_carte FROM Carti WHERE titlu_carte = 'Orasul Semilunii. Casa Pamantului si a Sangelui')
+);
+
+DELETE FROM TBR
+WHERE id_utilizator = (SELECT id_utilizator FROM Utilizatori WHERE nume = 'Anna Grey')
+  AND id_carte = (SELECT id_carte FROM Carti WHERE titlu_carte = 'Panza de paianjen');
+
+INSERT INTO Citite (id_utilizator, id_carte)
+VALUES (
+  (SELECT id_utilizator FROM Utilizatori WHERE nume = 'Anna Grey'),
+  (SELECT id_carte FROM Carti WHERE titlu_carte = 'Panza de paianjen')
+);
+
+DELETE FROM TBR
+WHERE id_utilizator = (SELECT id_utilizator FROM Utilizatori WHERE nume = 'Anna Grey')
+  AND id_carte = (SELECT id_carte FROM Carti WHERE titlu_carte = 'Menajera');
+
+INSERT INTO Citite (id_utilizator, id_carte)
+VALUES (
+  (SELECT id_utilizator FROM Utilizatori WHERE nume = 'Anna Grey'),
+  (SELECT id_carte FROM Carti WHERE titlu_carte = 'Menajera')
+);
+
+DELETE FROM TBR
+WHERE id_utilizator = (SELECT id_utilizator FROM Utilizatori WHERE nume = 'Mihaela Munte')
+  AND id_carte = (SELECT id_carte FROM Carti WHERE titlu_carte = 'Menajera');
+
+INSERT INTO Citite (id_utilizator, id_carte)
+VALUES (
+  (SELECT id_utilizator FROM Utilizatori WHERE nume = 'Mihaela Munte'),
+  (SELECT id_carte FROM Carti WHERE titlu_carte = 'Menajera')
+);
+
+DELETE FROM TBR
+WHERE id_utilizator = (SELECT id_utilizator FROM Utilizatori WHERE nume = 'Gloria Iones')
+  AND id_carte = (SELECT id_carte FROM Carti   WHERE titlu_carte = 'Regatul spinilor si al trandafirilor');
+
+INSERT INTO Citite (id_utilizator, id_carte)
+VALUES (
+  (SELECT id_utilizator FROM Utilizatori WHERE nume = 'Gloria Iones'),
+  (SELECT id_carte FROM Carti 
+   WHERE titlu_carte = 'Regatul spinilor si al trandafirilor')
+);
+
+DELETE FROM TBR
+WHERE id_utilizator = (SELECT id_utilizator FROM Utilizatori WHERE nume = 'Gloria Iones')
+  AND id_carte = (SELECT id_carte FROM Carti   WHERE titlu_carte = 'Printre tonuri cenusii');
+
+INSERT INTO Citite (id_utilizator, id_carte)
+VALUES (
+  (SELECT id_utilizator FROM Utilizatori WHERE nume = 'Gloria Iones'),
+  (SELECT id_carte FROM Carti 
+   WHERE titlu_carte = 'Printre tonuri cenusii')
+);
+
+
+--Recenzii
+INSERT INTO Recenzii (rating, comentariu, id_utilizator, id_carte)
+VALUES ( 4.5,'O carte impresionanta',
+  (SELECT id_utilizator FROM Utilizatori WHERE nume = 'Anna Grey'),
+  (SELECT id_carte FROM Carti WHERE titlu_carte = 'Panza de paianjen')
+);
+
+INSERT INTO Recenzii (rating, id_utilizator, id_carte)
+VALUES (  4,
+  (SELECT id_utilizator FROM Utilizatori WHERE nume = 'Anna Grey'),
+  (SELECT id_carte FROM Carti WHERE titlu_carte = 'Menajera')
+);
+
+INSERT INTO Recenzii (rating, id_utilizator, id_carte)
+VALUES ( 5,
+  (SELECT id_utilizator FROM Utilizatori WHERE nume = 'Mihaela Munte'),
+  (SELECT id_carte FROM Carti WHERE titlu_carte = 'Menajera')
+);
+
+INSERT INTO Recenzii (rating, id_utilizator, id_carte)
+VALUES ( 5,
+  (SELECT id_utilizator FROM Utilizatori WHERE nume = 'Gloria Iones'),
+  (SELECT id_carte FROM Carti 
+   WHERE titlu_carte = 'Regatul spinilor si al trandafirilor')
+);
+
+INSERT INTO Recenzii (rating, id_utilizator, id_carte)
+VALUES ( 4.5,
+  (SELECT id_utilizator FROM Utilizatori WHERE nume = 'Gloria Iones'),
+  (SELECT id_carte FROM Carti 
+   WHERE titlu_carte = 'Printre tonuri cenusii')
+);

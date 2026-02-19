@@ -1,0 +1,147 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8AF7ACA4-A712-945A-F1D6-4995A9DD6D60" name="Carti">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>660FEFE2-B5C7-BED6-196A-DB6B45282A12</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_carte" id="A6CA4E91-1DE0-45C5-4837-20242C1BE4E7">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>A6AE3073-87C2-9851-A210-EF8068877B58</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>carti_id_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>carti_id_trg</autoIncrementTriggerName>
+</Column>
+<Column name="titlu_carte" id="AB3AA36A-81B2-F364-1349-886788102356">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>E1CF91B3-F8C8-A690-67D6-6CA70AC08789</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="data_publicare" id="CE33FD4A-74F3-5D2F-E0FB-6D604B70E35E">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>A66B0E31-1C57-FB4C-0B23-DE4FF01FEAB9</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nr_pagini" id="6148A971-BC29-F5F7-EF5B-3593FBAF5A87">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>9950A554-7D7B-A086-26B6-BB6713EF2210</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<constraintName>carte_nr_pagini_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="nr_pagini &gt; 0"/>
+</checkConstraint>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_autor" id="6479C14C-0E0E-AB46-60EB-1ED04D59205D">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>00D69A73-C000-1C80-94DB-AEC1721B5AD2</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5315525E-D64C-C2C9-1984-3E2AD7510D52" referredColumn="CBB6A24A-0E63-B048-2CFD-862D7BFFF99D"/>
+</associations>
+</Column>
+<Column name="id_gen" id="9B8C95D1-A144-E081-A913-92A05816A602">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>F0A9D39C-36E1-19E9-F0CA-29C4E20DD673</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F3515931-F379-3684-53C8-1E4120800127" referredColumn="253EA52D-DFA0-AC1C-EDAD-93329D35C748"/>
+</associations>
+</Column>
+<Column name="editura" id="3F55648F-6F7B-37AD-61B1-B8C89F75B8D2">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>66247994-4A78-CA7F-E9CC-1FA99C460BE6</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5B9F47F7-AA37-3A47-4091-5B2CDEB73BFF" name="Carti_PK">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>59E5D307-70B9-41F3-9582-434571E7D25B</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A6CA4E91-1DE0-45C5-4837-20242C1BE4E7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="083CF46E-66DE-960B-2D14-9E07AE6B5AB8" name="autori_carti_fk">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>A9079E89-7E5F-C3E9-5584-04E34DAE9700</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6479C14C-0E0E-AB46-60EB-1ED04D59205D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E01C2DD2-A7EC-4F4D-3815-D52A83D9C83D" name="genuri_carti_fk">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>60CF413E-C11F-567D-8D12-DF936497B459</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9B8C95D1-A144-E081-A913-92A05816A602"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

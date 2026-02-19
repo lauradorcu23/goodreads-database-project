@@ -1,0 +1,126 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D8DC62F7-24C2-16A0-852E-D863B47A1FD3" name="Recenzii">
+<createdBy>User</createdBy>
+<createdTime>2025-10-20 17:55:36 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+<engineerTo>
+<item key="88173FF0-45ED-EF2A-B72A-B0D1E6B69857" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_recenzie" id="80CE83CB-8E6B-FAF3-ED8B-D53DD4BB2CA2">
+<createdBy>User</createdBy>
+<createdTime>2025-10-20 17:55:45 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+<engineerTo>
+<item key="88173FF0-45ED-EF2A-B72A-B0D1E6B69857" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rating" id="3C7D7272-6CDC-9A50-7333-F3B9339389DF">
+<createdBy>User</createdBy>
+<createdTime>2025-10-20 17:56:57 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+<engineerTo>
+<item key="88173FF0-45ED-EF2A-B72A-B0D1E6B69857" value="true"/>
+</engineerTo>
+<constraintName>recenzii_rating_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<dataTypeScale>1</dataTypeScale>
+<ownDataTypeParameters>,2,1</ownDataTypeParameters>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>1.0</beginValue>
+<endValue>5.0</endValue>
+<description>rating</description>
+</rangeDef>
+</listOfRanges>
+</Attribute>
+<Attribute name="comentariu" id="FE4AEE25-F886-5F4A-5651-DF3C8149E228">
+<createdBy>User</createdBy>
+<createdTime>2025-10-20 17:59:15 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+<engineerTo>
+<item key="88173FF0-45ED-EF2A-B72A-B0D1E6B69857" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_utilizator" id="2CC92807-31BD-04F6-D645-EA024F4E38EC">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:34 UTC</createdTime>
+<generatorID>C5B08B8E-5151-07E2-481D-3853726758B2</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<engineerTo>
+<item key="88173FF0-45ED-EF2A-B72A-B0D1E6B69857" value="true"/>
+</engineerTo>
+<referedAttribute>6798E964-4B16-4215-CFCA-2BFE9A742B0F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_carte" id="44827092-A2CA-D1E9-E3FF-E347948F85E7">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:34 UTC</createdTime>
+<generatorID>C5B08B8E-5151-07E2-481D-3853726758B2</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<engineerTo>
+<item key="88173FF0-45ED-EF2A-B72A-B0D1E6B69857" value="true"/>
+</engineerTo>
+<referedAttribute>DA1142F8-DD75-EEA0-D906-7F39671BC040</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B2FAFFE0-0F10-3CFF-9334-A437125DD425" name="Recenzii PK">
+<createdBy>User</createdBy>
+<createdTime>2025-10-20 17:56:01 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="88173FF0-45ED-EF2A-B72A-B0D1E6B69857" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>80CE83CB-8E6B-FAF3-ED8B-D53DD4BB2CA2</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="7AA4242D-A923-A6CB-DBBF-4E590F368D81" name="recenzii_id_uk">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 10:27:31 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+<engineerTo>
+<item key="88173FF0-45ED-EF2A-B72A-B0D1E6B69857" value="true"/>
+</engineerTo>
+<newElementsIDs>2CC92807-31BD-04F6-D645-EA024F4E38EC,44827092-A2CA-D1E9-E3FF-E347948F85E7</newElementsIDs>
+<usedAttributes>
+<attributeRef>2CC92807-31BD-04F6-D645-EA024F4E38EC</attributeRef>
+<attributeRef>44827092-A2CA-D1E9-E3FF-E347948F85E7</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

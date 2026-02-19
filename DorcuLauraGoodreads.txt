@@ -1,0 +1,50 @@
+	Tema proiectului: Goodreads
+
+	Descriere non-tehnică: 
+	
+	O platformă unde utilizatorul poate consulta cărți de la diferiți autori și le poate adăuga fie ca viitoare lecturi, fie ca lecturi deja citite.
+	Un autor poate avea mai multe cărți. Fiecare carte aparține unui singur autor și unui singur gen literar.
+	Un utilizator poate avea mai multe cărți la TBR si la citite, dar o carte poate fi adăugată doar o dată de către un utilizator la TBR/citite. Fiecare utilizator poate lăsa recenzii la mai multe cărți, dar doar o recenzie per carte. Dacă o carte este in tabela TBR dar, utilizatorul o adaugă și la citite aceasta va fi ștearsă din TBR.
+	Pentru simplitate, cărțile care o să se lanseze in viitorul apropiat nu sunt luate in calcul.
+	Atributul data_publicare din tabela Carti se refera la data cand a fost publicata cartea prima dată, nu cand a fost publicată la editură. Daca nu se poate identifica luna si ziua apariției o sa se pună 1 ianuarie.
+
+	Descriere tehnică:
+	
+	- tabela utilizatori:
+		- id_utilizator 
+		- nume 
+
+	- tabela profil_utlizator:
+		-username
+		-email
+
+	- tabela autori:
+		- id_autor 
+		- nume 
+
+	- tabela genuri:
+		-id_gen
+		-denumire_gen 
+		-descriere 
+
+	- tabela carti:
+		-id_carte 
+		-titlu_carte 
+		-data_publicare 
+		-nr_pagini
+		-editura  
+
+		
+	-tabela TBR(to be read):
+		
+	-tabela Citite:
+		
+	- tabela recenzii:	
+		-id_recenzie 
+		-rating 
+		-comentariu 
+		
+
+
+
+

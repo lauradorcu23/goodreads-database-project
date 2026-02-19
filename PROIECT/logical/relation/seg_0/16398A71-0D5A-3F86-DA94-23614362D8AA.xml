@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="utilizatori_tbr_fk" directorySegmentName="seg_0" id="16398A71-0D5A-3F86-DA94-23614362D8AA">
+<createdBy>User</createdBy>
+<createdTime>2025-11-09 19:10:41 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+<engineerTo>
+<item key="88173FF0-45ED-EF2A-B72A-B0D1E6B69857" value="true"/>
+</engineerTo>
+<sourcePk>25CE2D29-BD75-9B07-C725-04310F038A3B</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>adauga mai multe</nameOnSource>
+<nameOnTarget>apartin unui</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>7EEA8EAA-AC7B-A8CA-0952-61267622684E</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>5408A65E-A7DB-59E8-18B9-95E36AB936C6</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B142EA41-ECCD-2898-57E0-5C6D048C581E" name="Autori">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>38135996-E49C-7C18-931C-A2E2B73A3296</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_autor" id="CBB6A24A-0E63-B048-2CFD-862D7BFFF99D">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>F8B84C82-E299-11E1-5688-8682D8A0ABC0</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>autori_id_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>autori_id_trg</autoIncrementTriggerName>
+</Column>
+<Column name="nume" id="F2C4D431-83DE-784A-959B-1AF90E71FE2C">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>C4137ACD-07ED-C52A-5385-CC32668750C7</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<constraintName>autori_nume_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="regexp_like(nume, &apos;^[^0-9]{2,}&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A105A450-ADAE-BC65-8FD9-452CF4DE58B0" name="Autori_PK">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>9EEAF58F-0E0B-9555-81D5-39D5822AF6FD</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CBB6A24A-0E63-B048-2CFD-862D7BFFF99D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="75B31517-D502-DD6C-AC62-1B3E9B0186A8" name="autori_nume_uk">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>3EE759F5-D396-B36D-2AEC-1475D35EF200</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F2C4D431-83DE-784A-959B-1AF90E71FE2C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

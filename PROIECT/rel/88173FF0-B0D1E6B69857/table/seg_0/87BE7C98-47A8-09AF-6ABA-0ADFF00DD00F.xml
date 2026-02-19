@@ -1,0 +1,81 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="87BE7C98-47A8-09AF-6ABA-0ADFF00DD00F" name="TBR">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>5408A65E-A7DB-59E8-18B9-95E36AB936C6</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_carte" id="626AE632-4E8A-CA35-B3B3-BE1462F87094">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>840F12E7-F31B-05C3-9012-04E1198AA58D</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7A61009D-847E-A033-88DC-814460630201" referredColumn="A6CA4E91-1DE0-45C5-4837-20242C1BE4E7"/>
+</associations>
+</Column>
+<Column name="id_utilizator" id="AEFB518B-7E4E-0DF0-49C4-C16A74D7BEF7">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>8B570B66-A13D-6844-CA43-E59855CB922B</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7B9877A8-2D74-B9E0-3097-A211CE28FB8C" referredColumn="F13BB1EC-26AF-D68E-CEE1-F54D5F832A67"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8ADEC028-CA8B-3220-7DF7-C1E7B0D1BAAE" name="TBR_PK">
+<createdBy>User</createdBy>
+<createdTime>2025-12-13 23:08:46 UTC</createdTime>
+<generatorID>4030EE93-D7AA-8944-5AEC-CE12FF0CFC26</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="626AE632-4E8A-CA35-B3B3-BE1462F87094"/>
+<colUsage columnID="AEFB518B-7E4E-0DF0-49C4-C16A74D7BEF7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9378809C-9101-96B4-BBF6-977664180185" name="carti_tbr_fk">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>19900EA9-40B3-8B4E-02B0-DEDBAA39D02F</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="626AE632-4E8A-CA35-B3B3-BE1462F87094"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="34703EB8-0901-1C2D-9F08-6C9B99638F4D" name="utilizatori_tbr_fk">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>16398A71-0D5A-3F86-DA94-23614362D8AA</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AEFB518B-7E4E-0DF0-49C4-C16A74D7BEF7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

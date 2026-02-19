@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="Recenzii" directorySegmentName="seg_0" id="42C09338-BA45-08C1-CF30-799B916816BB">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="id_utilizator" id="69F46DBC-499E-7FF7-6D6D-F3DC9EF61CAC">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="comentariu" id="AC9442E6-5622-E5DE-5E57-47812875415C">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="id_recenzie" id="C3D79337-5BF1-CB3C-3FE2-53C5C31CE6F7">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="id_carte" id="E23181DC-9BCB-B37C-8B94-C5CB1A8D4D07">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="rating" id="F064A254-84C8-0027-F09D-F1CD8A407A2D">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="citite_recenzii_fk" id="B07035F9-D171-0626-E296-A7FB29342FEA">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="Recenzii_PK" id="6050A8C0-80D2-1062-0FAE-31673EA68465">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="recenzii_id_uk" id="5798B97C-9A81-1895-F060-A338A745936A">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 15:18:44 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev11g>

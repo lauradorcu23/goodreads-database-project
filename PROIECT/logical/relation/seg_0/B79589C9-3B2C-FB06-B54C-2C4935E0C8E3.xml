@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="utilizatori_citite_fk" directorySegmentName="seg_0" id="B79589C9-3B2C-FB06-B54C-2C4935E0C8E3">
+<createdBy>User</createdBy>
+<createdTime>2025-11-27 11:15:14 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+<engineerTo>
+<item key="88173FF0-45ED-EF2A-B72A-B0D1E6B69857" value="true"/>
+</engineerTo>
+<sourcePk>25CE2D29-BD75-9B07-C725-04310F038A3B</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>are carti</nameOnSource>
+<nameOnTarget>sunt a unui</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>7EEA8EAA-AC7B-A8CA-0952-61267622684E</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>107075B4-3494-E43E-7198-F509C6612E2F</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

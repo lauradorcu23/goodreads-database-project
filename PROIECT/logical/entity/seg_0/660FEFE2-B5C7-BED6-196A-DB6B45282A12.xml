@@ -1,0 +1,133 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="660FEFE2-B5C7-BED6-196A-DB6B45282A12" name="Carti">
+<createdBy>User</createdBy>
+<createdTime>2025-10-20 17:38:46 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+<engineerTo>
+<item key="88173FF0-45ED-EF2A-B72A-B0D1E6B69857" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_carte" id="A6AE3073-87C2-9851-A210-EF8068877B58">
+<createdBy>User</createdBy>
+<createdTime>2025-10-20 17:38:59 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+<engineerTo>
+<item key="88173FF0-45ED-EF2A-B72A-B0D1E6B69857" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="titlu_carte" id="E1CF91B3-F8C8-A690-67D6-6CA70AC08789">
+<createdBy>User</createdBy>
+<createdTime>2025-10-20 17:39:54 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+<engineerTo>
+<item key="88173FF0-45ED-EF2A-B72A-B0D1E6B69857" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data_publicare" id="A66B0E31-1C57-FB4C-0B23-DE4FF01FEAB9">
+<createdBy>User</createdBy>
+<createdTime>2025-10-20 17:42:34 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+<engineerTo>
+<item key="88173FF0-45ED-EF2A-B72A-B0D1E6B69857" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nr_pagini" id="9950A554-7D7B-A086-26B6-BB6713EF2210">
+<createdBy>User</createdBy>
+<createdTime>2025-11-09 18:57:53 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+<engineerTo>
+<item key="88173FF0-45ED-EF2A-B72A-B0D1E6B69857" value="true"/>
+</engineerTo>
+<constraintName>carte_nr_pagini_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="nr_pagini &gt; 0"/>
+</checkConstraint>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_autor" id="00D69A73-C000-1C80-94DB-AEC1721B5AD2">
+<createdBy>User</createdBy>
+<createdTime>2025-11-09 18:59:42 UTC</createdTime>
+<generatorID>A9079E89-7E5F-C3E9-5584-04E34DAE9700</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<engineerTo>
+<item key="88173FF0-45ED-EF2A-B72A-B0D1E6B69857" value="true"/>
+</engineerTo>
+<referedAttribute>F8B84C82-E299-11E1-5688-8682D8A0ABC0</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_gen" id="F0A9D39C-36E1-19E9-F0CA-29C4E20DD673">
+<createdBy>User</createdBy>
+<createdTime>2025-11-09 19:00:28 UTC</createdTime>
+<generatorID>60CF413E-C11F-567D-8D12-DF936497B459</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<engineerTo>
+<item key="88173FF0-45ED-EF2A-B72A-B0D1E6B69857" value="true"/>
+</engineerTo>
+<referedAttribute>94A49144-75DB-0FF8-138C-C823D6272E89</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="editura" id="66247994-4A78-CA7F-E9CC-1FA99C460BE6">
+<createdBy>User</createdBy>
+<createdTime>2025-10-20 17:40:16 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+<engineerTo>
+<item key="88173FF0-45ED-EF2A-B72A-B0D1E6B69857" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="59E5D307-70B9-41F3-9582-434571E7D25B" name="Carti PK">
+<createdBy>User</createdBy>
+<createdTime>2025-10-20 17:39:49 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="88173FF0-45ED-EF2A-B72A-B0D1E6B69857" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A6AE3073-87C2-9851-A210-EF8068877B58</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

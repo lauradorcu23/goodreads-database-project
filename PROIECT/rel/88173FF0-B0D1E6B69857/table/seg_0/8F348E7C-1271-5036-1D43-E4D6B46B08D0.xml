@@ -1,0 +1,81 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8F348E7C-1271-5036-1D43-E4D6B46B08D0" name="Citite">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>107075B4-3494-E43E-7198-F509C6612E2F</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_utilizator" id="20178885-5DD0-6E54-9849-5ADA56EBCA8E">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>6798E964-4B16-4215-CFCA-2BFE9A742B0F</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2B8204F2-44EE-1699-386C-700302E0988C" referredColumn="F13BB1EC-26AF-D68E-CEE1-F54D5F832A67"/>
+</associations>
+</Column>
+<Column name="id_carte" id="729538F1-FC86-65D8-D53A-C2B6B8EC37AA">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>DA1142F8-DD75-EEA0-D906-7F39671BC040</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A82C252E-7232-0756-C5AE-76957DC7F59C" referredColumn="A6CA4E91-1DE0-45C5-4837-20242C1BE4E7"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="347B607D-72D9-514F-A8C7-8936E7CF39A4" name="Citite_PK">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>73B7DE2F-30FC-2E44-B225-23379E165C47</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="20178885-5DD0-6E54-9849-5ADA56EBCA8E"/>
+<colUsage columnID="729538F1-FC86-65D8-D53A-C2B6B8EC37AA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="24872537-CB7A-8AD6-4703-E8D0BDB9A855" name="carti_citite_fk">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>2C09677E-FF7F-E10F-6342-78143C610D1B</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="729538F1-FC86-65D8-D53A-C2B6B8EC37AA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EDC7567A-1971-E181-8CD2-701C1F0F5768" name="utilizatori_citite_fk">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>B79589C9-3B2C-FB06-B54C-2C4935E0C8E3</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="20178885-5DD0-6E54-9849-5ADA56EBCA8E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

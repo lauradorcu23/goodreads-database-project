@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="38135996-E49C-7C18-931C-A2E2B73A3296" name="Autori">
+<createdBy>User</createdBy>
+<createdTime>2025-10-19 20:00:21 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+<engineerTo>
+<item key="88173FF0-45ED-EF2A-B72A-B0D1E6B69857" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_autor" id="F8B84C82-E299-11E1-5688-8682D8A0ABC0">
+<createdBy>User</createdBy>
+<createdTime>2025-10-20 17:28:52 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+<engineerTo>
+<item key="88173FF0-45ED-EF2A-B72A-B0D1E6B69857" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nume" id="C4137ACD-07ED-C52A-5385-CC32668750C7">
+<createdBy>User</createdBy>
+<createdTime>2025-10-20 17:29:38 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+<engineerTo>
+<item key="88173FF0-45ED-EF2A-B72A-B0D1E6B69857" value="true"/>
+</engineerTo>
+<constraintName>autori_nume_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="regexp_like(nume, &apos;^[^0-9]{2,}$&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="9EEAF58F-0E0B-9555-81D5-39D5822AF6FD" name="Autori PK">
+<createdBy>User</createdBy>
+<createdTime>2025-10-24 10:00:19 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="88173FF0-45ED-EF2A-B72A-B0D1E6B69857" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F8B84C82-E299-11E1-5688-8682D8A0ABC0</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="3EE759F5-D396-B36D-2AEC-1475D35EF200" name="autori_nume_uk">
+<createdBy>User</createdBy>
+<createdTime>2025-11-23 18:32:01 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="88173FF0-45ED-EF2A-B72A-B0D1E6B69857" value="false"/>
+</engineerTo>
+<newElementsIDs>C4137ACD-07ED-C52A-5385-CC32668750C7</newElementsIDs>
+<usedAttributes>
+<attributeRef>C4137ACD-07ED-C52A-5385-CC32668750C7</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.oracle.v11g.StorageDesignOraclev11g>
+   <object objectType="User" objectID="MDSYS" name="MDSYS" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.storage.oracle.v10g.UserOraclev10g" propertyParentId="32076570-BF29817DFF70" propertySourceId="" propertyTargetId=""/>
+   <object objectType="User" objectID="PUBLIC" name="PUBLIC" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.storage.oracle.v10g.UserOraclev10g" propertyParentId="32076570-BF29817DFF70" propertySourceId="" propertyTargetId=""/>
+   <object objectType="SType" objectID="47E390DE-0671-C4B1-8428-0F45CBEE18F8" name="SDO_GEOMETRY" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.storage.oracle.v10g.StructuredTypeProxyOraclev10g" propertyParentId="32076570-BF29817DFF70" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Table" objectID="25B19F7F-BA8A-31E4-026A-BC0F74DDB911" name="" seqName="seg_0"/>
+   <object objectType="Table" objectID="2DE21395-D0AA-31C9-26FC-5BC897F03314" name="" seqName="seg_0"/>
+   <object objectType="Table" objectID="37FEF3C8-C412-6699-E7AD-12FAB4C65E52" name="" seqName="seg_0"/>
+   <object objectType="Table" objectID="42C09338-BA45-08C1-CF30-799B916816BB" name="Recenzii" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" propertyParentId="32076570-BF29817DFF70" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Table" objectID="556663ED-5A2A-F52A-370D-B73648F8A34E" name="" seqName="seg_0"/>
+   <object objectType="Table" objectID="57875E7B-B2A9-8B53-17D9-E6DC03029430" name="" seqName="seg_0"/>
+   <object objectType="Table" objectID="9F3F59E7-0007-AF04-DD21-ACAE587E2BB3" name="" seqName="seg_0"/>
+   <object objectType="Table" objectID="F18B5920-D38C-7D5E-8F60-D758AD6D9A2A" name="" seqName="seg_0"/>
+   <object objectType="Trigger" objectID="996B5794-D2D9-6C2F-FE0F-772BFFAADC87" name="trg_cari_DATA" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" propertyParentId="32076570-BF29817DFF70" propertySourceId="" propertyTargetId=""/>
+</oracle.dbtools.crest.model.design.storage.oracle.v11g.StorageDesignOraclev11g>

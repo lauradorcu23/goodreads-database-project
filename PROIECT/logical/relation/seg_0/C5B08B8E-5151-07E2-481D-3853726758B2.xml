@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="citite_recenzii_fk" directorySegmentName="seg_0" id="C5B08B8E-5151-07E2-481D-3853726758B2">
+<createdBy>User</createdBy>
+<createdTime>2025-11-27 11:19:51 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+<engineerTo>
+<item key="88173FF0-45ED-EF2A-B72A-B0D1E6B69857" value="true"/>
+</engineerTo>
+<sourcePk>C8FA0E4E-7983-B26E-0EA3-1DE3BEB8970E</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>au o</nameOnSource>
+<nameOnTarget>apartin unei</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>107075B4-3494-E43E-7198-F509C6612E2F</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>D8DC62F7-24C2-16A0-852E-D863B47A1FD3</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

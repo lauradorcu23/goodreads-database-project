@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="tilizatori_profil_fk" directorySegmentName="seg_0" id="3520E9AD-7ECF-9F50-1D07-25D780C222C6">
+<createdBy>User</createdBy>
+<createdTime>2025-11-09 18:56:07 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+<engineerTo>
+<item key="88173FF0-45ED-EF2A-B72A-B0D1E6B69857" value="true"/>
+</engineerTo>
+<sourcePk>25CE2D29-BD75-9B07-C725-04310F038A3B</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>are un</nameOnSource>
+<nameOnTarget>este a unui</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>7EEA8EAA-AC7B-A8CA-0952-61267622684E</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>172B535B-0620-C0BB-5E4D-3FFCED06B480</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

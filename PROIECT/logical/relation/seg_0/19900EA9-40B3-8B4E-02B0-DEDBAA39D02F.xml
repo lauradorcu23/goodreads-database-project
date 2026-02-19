@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="carti_tbr_fk" directorySegmentName="seg_0" id="19900EA9-40B3-8B4E-02B0-DEDBAA39D02F">
+<createdBy>User</createdBy>
+<createdTime>2025-11-03 15:19:15 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+<engineerTo>
+<item key="88173FF0-45ED-EF2A-B72A-B0D1E6B69857" value="true"/>
+</engineerTo>
+<sourcePk>59E5D307-70B9-41F3-9582-434571E7D25B</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>este adaugata de maii multe ori in</nameOnSource>
+<nameOnTarget>sunt</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>660FEFE2-B5C7-BED6-196A-DB6B45282A12</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>5408A65E-A7DB-59E8-18B9-95E36AB936C6</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

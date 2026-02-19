@@ -1,0 +1,36 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="Genuri" directorySegmentName="seg_0" id="57875E7B-B2A9-8B53-17D9-E6DC03029430">
+<createdBy>User</createdBy>
+<createdTime>2025-11-21 19:42:17 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="id_gen" id="C28F496E-A6B4-4BDB-8FBE-58E49DB2E865">
+<createdBy>User</createdBy>
+<createdTime>2025-11-21 19:42:17 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="descriere" id="E99FAA74-ABD7-9A84-D29C-A80B6C8CE777">
+<createdBy>User</createdBy>
+<createdTime>2025-11-21 19:42:17 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="denumire_gen" id="EA79E390-7F82-47EF-7BC7-C1C89A70FFD5">
+<createdBy>User</createdBy>
+<createdTime>2025-11-21 19:42:17 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="Genuri_PK" id="00689F39-739D-4A2C-D491-E56FA2FEF2EB">
+<createdBy>User</createdBy>
+<createdTime>2025-11-21 19:42:17 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

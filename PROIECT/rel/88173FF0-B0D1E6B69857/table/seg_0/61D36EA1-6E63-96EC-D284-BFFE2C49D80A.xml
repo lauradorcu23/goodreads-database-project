@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="61D36EA1-6E63-96EC-D284-BFFE2C49D80A" name="Genuri">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>1FAC514D-25E4-0BBB-FC7C-C9D27D58DD6D</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_gen" id="253EA52D-DFA0-AC1C-EDAD-93329D35C748">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>94A49144-75DB-0FF8-138C-C823D6272E89</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>genuri_id_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>genuri_id_trg</autoIncrementTriggerName>
+</Column>
+<Column name="denumire_gen" id="32BB75FE-5961-D17A-D133-7DAC7DCA00FF">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>6578F143-8ECE-4632-3119-5B11C673A684</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descriere" id="72B0B1FC-E48D-7008-4395-B78EE7D748C3">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>37739718-EA57-A358-1A84-18D52A3C6FAB</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0895CAC7-1150-8014-DACB-BC1D1F2CC749" name="Genuri_PK">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>16E25CBF-8585-9FFB-F7E5-2E6C0DE32BFC</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="253EA52D-DFA0-AC1C-EDAD-93329D35C748"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EC65CEB2-5649-4FA0-BE3C-44E3F5166340" name="genuri_denumire_uk">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>5F1A1F26-8F2B-B2C4-4949-328CF3E57BB6</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="32BB75FE-5961-D17A-D133-7DAC7DCA00FF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

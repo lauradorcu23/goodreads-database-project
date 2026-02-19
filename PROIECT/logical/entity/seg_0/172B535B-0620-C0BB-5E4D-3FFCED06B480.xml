@@ -1,0 +1,109 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="172B535B-0620-C0BB-5E4D-3FFCED06B480" name="Profil utilizatori">
+<createdBy>User</createdBy>
+<createdTime>2025-11-03 15:39:33 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+<engineerTo>
+<item key="88173FF0-45ED-EF2A-B72A-B0D1E6B69857" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="username" id="5216D230-64CA-65A6-3A17-E5EA8C2727D5">
+<createdBy>User</createdBy>
+<createdTime>2025-11-03 15:40:02 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+<engineerTo>
+<item key="88173FF0-45ED-EF2A-B72A-B0D1E6B69857" value="true"/>
+</engineerTo>
+<constraintName>profil_username_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="length(username) &gt; 1"/>
+</checkConstraint>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="email" id="7EA8318D-CDEB-A87E-7308-CCD89408AB6E">
+<createdBy>User</createdBy>
+<createdTime>2025-11-03 15:41:09 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+<engineerTo>
+<item key="88173FF0-45ED-EF2A-B72A-B0D1E6B69857" value="true"/>
+</engineerTo>
+<constraintName>profil_email_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="regexp_like(email, &apos;[a-z0-9._%-]+@[a-z0-9._%-]+\.[a-z]{2,4}&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_utilizator" id="E1D1D6A1-33D6-6AE0-88AB-83B7F6BE6A3C">
+<createdBy>User</createdBy>
+<createdTime>2025-11-09 18:56:07 UTC</createdTime>
+<generatorID>3520E9AD-7ECF-9F50-1D07-25D780C222C6</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<engineerTo>
+<item key="88173FF0-45ED-EF2A-B72A-B0D1E6B69857" value="true"/>
+</engineerTo>
+<referedAttribute>285C7D04-2957-8582-1D13-2D0ADB013F6B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="DA708A64-8EC8-6D34-F665-F31BFF3CAC61" name="profil_email_uk">
+<createdBy>User</createdBy>
+<createdTime>2025-11-03 15:49:25 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="88173FF0-45ED-EF2A-B72A-B0D1E6B69857" value="false"/>
+</engineerTo>
+<newElementsIDs>7EA8318D-CDEB-A87E-7308-CCD89408AB6E</newElementsIDs>
+<usedAttributes>
+<attributeRef>7EA8318D-CDEB-A87E-7308-CCD89408AB6E</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="0E9CB6E1-45DC-3CDC-8ED2-890338341FB1" name="profil_username_uk">
+<createdBy>User</createdBy>
+<createdTime>2025-11-03 15:49:58 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="88173FF0-45ED-EF2A-B72A-B0D1E6B69857" value="false"/>
+</engineerTo>
+<newElementsIDs>5216D230-64CA-65A6-3A17-E5EA8C2727D5</newElementsIDs>
+<usedAttributes>
+<attributeRef>5216D230-64CA-65A6-3A17-E5EA8C2727D5</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="D8DDCD9A-4164-29C3-391C-C7EB51405F90" name="Profil utilizatori PK">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 10:30:13 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="88173FF0-45ED-EF2A-B72A-B0D1E6B69857" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E1D1D6A1-33D6-6AE0-88AB-83B7F6BE6A3C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

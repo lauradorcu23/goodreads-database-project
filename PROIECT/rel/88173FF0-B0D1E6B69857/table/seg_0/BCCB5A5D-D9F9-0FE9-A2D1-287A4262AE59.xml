@@ -1,0 +1,107 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BCCB5A5D-D9F9-0FE9-A2D1-287A4262AE59" name="Profil_utilizatori">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>172B535B-0620-C0BB-5E4D-3FFCED06B480</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="username" id="BA4AB06C-B319-D7D7-5554-12012E93CAD2">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>5216D230-64CA-65A6-3A17-E5EA8C2727D5</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<constraintName>profil_username_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="length(username) &gt; 1"/>
+</checkConstraint>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="8EBFEDD1-7FCB-12F5-C0F8-325BFB20CD92">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>7EA8318D-CDEB-A87E-7308-CCD89408AB6E</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<constraintName>profil_email_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="regexp_like(email, &apos;[a-z0-9._%-]+@[a-z0-9._%-]+\.[a-z]{2,4}&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_utilizator" id="672275C6-AFAE-CBBD-B41E-9CA1EA0BCFCB">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>E1D1D6A1-33D6-6AE0-88AB-83B7F6BE6A3C</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CE43EF4E-0FF1-8843-D58A-39093E2B0CD1" referredColumn="F13BB1EC-26AF-D68E-CEE1-F54D5F832A67"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DEE083D3-47BC-F072-EFDB-96AB1D6FE319" name="Profil_utilizatori_PK">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>D8DDCD9A-4164-29C3-391C-C7EB51405F90</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="672275C6-AFAE-CBBD-B41E-9CA1EA0BCFCB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="42958287-DCE2-CF11-DF7A-2B1F47687AB3" name="profil_email_uk">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>DA708A64-8EC8-6D34-F665-F31BFF3CAC61</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8EBFEDD1-7FCB-12F5-C0F8-325BFB20CD92"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8EA89BB5-DBEA-2A94-8B9E-5464F721AB09" name="profil_username_uk">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>0E9CB6E1-45DC-3CDC-8ED2-890338341FB1</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BA4AB06C-B319-D7D7-5554-12012E93CAD2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8D72CFA2-3AAC-733D-89F5-C0857D71FEA9" name="tilizatori_profil_fk">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>3520E9AD-7ECF-9F50-1D07-25D780C222C6</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="672275C6-AFAE-CBBD-B41E-9CA1EA0BCFCB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

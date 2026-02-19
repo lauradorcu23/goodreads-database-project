@@ -1,0 +1,130 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="42C09338-BA45-08C1-CF30-799B916816BB" name="Recenzii">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>D8DC62F7-24C2-16A0-852E-D863B47A1FD3</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_recenzie" id="C3D79337-5BF1-CB3C-3FE2-53C5C31CE6F7">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>80CE83CB-8E6B-FAF3-ED8B-D53DD4BB2CA2</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>recenzii_id_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>recenzii_id_trg</autoIncrementTriggerName>
+</Column>
+<Column name="rating" id="F064A254-84C8-0027-F09D-F1CD8A407A2D">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>3C7D7272-6CDC-9A50-7333-F3B9339389DF</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<constraintName>recenzii_rating_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<dataTypeScale>1</dataTypeScale>
+<ownDataTypeParameters>,2,1</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>1.0</beginValue>
+<endValue>5.0</endValue>
+<description>rating</description>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="comentariu" id="AC9442E6-5622-E5DE-5E57-47812875415C">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>FE4AEE25-F886-5F4A-5651-DF3C8149E228</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_utilizator" id="69F46DBC-499E-7FF7-6D6D-F3DC9EF61CAC">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>2CC92807-31BD-04F6-D645-EA024F4E38EC</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0B1C71F2-76B0-8F2C-2AE6-D6BF35788351" referredColumn="20178885-5DD0-6E54-9849-5ADA56EBCA8E"/>
+</associations>
+</Column>
+<Column name="id_carte" id="E23181DC-9BCB-B37C-8B94-C5CB1A8D4D07">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>44827092-A2CA-D1E9-E3FF-E347948F85E7</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0B1C71F2-76B0-8F2C-2AE6-D6BF35788351" referredColumn="729538F1-FC86-65D8-D53A-C2B6B8EC37AA"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6050A8C0-80D2-1062-0FAE-31673EA68465" name="Recenzii_PK">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>B2FAFFE0-0F10-3CFF-9334-A437125DD425</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C3D79337-5BF1-CB3C-3FE2-53C5C31CE6F7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5798B97C-9A81-1895-F060-A338A745936A" name="recenzii_id_uk">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 15:18:44 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="69F46DBC-499E-7FF7-6D6D-F3DC9EF61CAC"/>
+<colUsage columnID="E23181DC-9BCB-B37C-8B94-C5CB1A8D4D07"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B07035F9-D171-0626-E296-A7FB29342FEA" name="citite_recenzii_fk">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>C5B08B8E-5151-07E2-481D-3853726758B2</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="69F46DBC-499E-7FF7-6D6D-F3DC9EF61CAC"/>
+<colUsage columnID="E23181DC-9BCB-B37C-8B94-C5CB1A8D4D07"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

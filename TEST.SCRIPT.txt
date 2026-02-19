@@ -1,0 +1,194 @@
+INSERT INTO Utilizatori (nume) VALUES ('A12');
+--eroare CK, numele nu trebuie sa contina cifre
+--check constraint (RO_A284_SQL_S75.UTILIZATORI_NUME_CK) violated
+
+INSERT INTO Utilizatori (nume) VALUES ('A');
+--eroare CK, nume >1
+--check constraint (RO_A284_SQL_S75.UTILIZATORI_NUME_CK) violated
+
+INSERT INTO Utilizatori (nume) VALUES (NULL);
+--eroare NN
+--cannot insert NULL into ("RO_A284_SQL_S75"."UTILIZATORI"."NUME")
+
+INSERT INTO Autori (nume) VALUES ('Autor1');
+-- eroare CK,nume nu trebuie sa contina cifre
+--check constraint (RO_A284_SQL_S75.AUTORI_NUME_CK) violated
+
+INSERT INTO Profil_utilizatori (username, email, id_utilizator)
+VALUES ( 'anna','annagrey@gmail.com',
+  (SELECT id_utilizator FROM Utilizatori WHERE nume = 'Anna Grey')
+);
+--eroare PK, Anna Grey deja are creat un Profil Utilizator
+--unique constraint (RO_A284_SQL_S75.PROFIL_UTILIZATORI_PK) violated
+
+INSERT INTO Utilizatori (nume) VALUES('Anna Gal');
+
+INSERT INTO Profil_utilizatori (username, email, id_utilizator)
+VALUES ( 'anna.g','annagrey@gmail.com',
+  (SELECT id_utilizator FROM Utilizatori WHERE nume = 'Anna Gal')
+);
+--eroare UK, email ul este deja folosit
+--unique constraint (RO_A284_SQL_S75.PROFIL_EMAIL_UK) violated
+
+UPDATE Profil_utilizatori
+SET username = 'anna.g'
+WHERE id_utilizator = ( SELECT id_utilizator FROM Utilizatori
+  WHERE nume = 'Mihaela Munte'
+);
+--eroare UK, username deja folosit
+--unique constraint (RO_A284_SQL_S75.PROFIL_USERNAME_UK) violated
+
+INSERT INTO Profil_utilizatori (username, email, id_utilizator)
+VALUES ( 'annaGal','test',
+  (SELECT id_utilizator FROM Utilizatori WHERE nume = 'Anna Gal')
+);
+--eroare CK, email invalid
+--check constraint (RO_A284_SQL_S75.PROFIL_EMAIL_CK) violated
+
+INSERT INTO Autori (nume) VALUES ('AUTOR12');
+--eroare CK, numele autorului nu poate contine  cifre
+--check constraint (RO_A284_SQL_S75.AUTORI_NUME_CK) violated
+
+DELETE FROM Autori
+WHERE nume = 'Stephen King';
+--eroare FK, nu pot sterge un autor care a publicat o carte
+--integrity constraint (RO_A284_SQL_S75.AUTORI_CARTI_FK) violated - child record found
+
+INSERT INTO Genuri(denumire_gen) VALUES ('Clasice');
+--eroare UK, este deja inserata aceasta valoare
+-- unique constraint (RO_A284_SQL_S75.GENURI_DENUMIRE_UK) violated
+
+INSERT INTO Carti (titlu_carte, data_publicare, nr_pagini, id_autor, id_gen)
+VALUES ( NULL, DATE '1999-01-01', 200,
+  (SELECT id_autor FROM Autori WHERE nume = 'Ruta Sepetys'),
+  (SELECT id_gen FROM Genuri WHERE denumire_gen = 'Fictiune istorica')
+);
+-- eroare NN, Trebuie sa existe titlul carti
+--cannot insert NULL into ("RO_A284_SQL_S75"."CARTI"."TITLU_CARTE")
+
+INSERT INTO Carti (titlu_carte, data_publicare, nr_pagini, id_autor, id_gen)
+VALUES ( 'Cartea Viitorului', DATE '2030-01-01', 200,
+  (SELECT id_autor FROM Autori WHERE nume = 'Ruta Sepetys'),
+  (SELECT id_gen FROM Genuri WHERE denumire_gen = 'Fictiune istorica')
+);
+--eroare trg, data invalisa
+--Data invalida: data publicarii trebuie sa fie mai mica decat data curenta; error during execution of trigger "RO_A284_SQL_S75.CARTI_DATA_TRG", 
+
+INSERT INTO Carti (titlu_carte, data_publicare, nr_pagini, id_autor, id_gen)
+VALUES ( 'ABC', DATE '2020-01-01', 200,
+ 999,
+  (SELECT id_gen FROM Genuri WHERE denumire_gen = 'Fictiune istorica')
+);
+--eroare FK, nu exista id_autor=999;
+--integrity constraint (RO_A284_SQL_S75.AUTORI_CARTI_FK) violated 
+
+UPDATE Carti
+SET nr_pagini = 0
+WHERE titlu_carte = 'Menajera';
+-- eroare CK, nr_pagini>0
+--check constraint (RO_A284_SQL_S75.CARTE_NR_PAGINI_CK) violated
+
+DELETE FROM Carti
+WHERE titlu_carte = 'Menajera';
+--eroare FK, nu pot sterge o carte daca aceasta a fost adaugata in Citite/Tbr
+--integrity constraint (RO_A284_SQL_S75.CARTI_CITITE_FK) violated - child record found
+
+INSERT INTO Citite (id_utilizator, id_carte)
+VALUES (
+  (SELECT id_utilizator FROM Utilizatori WHERE nume = 'Anna Grey'),
+  (SELECT id_carte FROM Carti WHERE titlu_carte = 'Panza de paianjen')
+);
+--eroare UK, in Citite este deja aceasat Carte
+--unique constraint (RO_A284_SQL_S75.CITITE_PK) violated
+
+INSERT INTO TBR (id_carte, id_utilizator)
+VALUES (
+  (SELECT id_carte FROM Carti WHERE titlu_carte = 'Menajera'),
+  999
+);
+--eroare FK, nu exista acest utilizator
+-- integrity constraint (RO_A284_SQL_S75.UTILIZATORI_TBR_FK) violated
+
+INSERT INTO TBR (id_carte, id_utilizator)
+VALUES (
+  (SELECT id_carte FROM Carti WHERE titlu_carte = 'Cimitirul Animalelor'),
+  (SELECT id_utilizator FROM Utilizatori WHERE nume = 'Mihaela Munte')
+);
+--eroare UK, exista deja aceasta carte in TBR ul acestui Utilizator
+--unique constraint (RO_A284_SQL_S75.TBR_ID_UK) violated
+
+INSERT INTO Recenzii (rating, id_utilizator, id_carte)
+VALUES (
+  4,
+  (SELECT id_utilizator FROM Utilizatori WHERE nume = 'Anna Grey'),
+  (SELECT id_carte FROM Carti WHERE titlu_carte = 'Regatul spinilor si al trandafirilor')
+);
+--eroare FK, utilizatorul nu poate oferi o recenzie unei carti care nu este citita
+-- integrity constraint (RO_A284_SQL_S75.CITITE_RECENZII_FK) violated 
+
+INSERT INTO Recenzii (rating, comentariu, id_utilizator, id_carte)
+VALUES ( 6,'O carte impresionanta',
+  (SELECT id_utilizator FROM Utilizatori WHERE nume = 'Anna Grey'),
+  (SELECT id_carte FROM Carti WHERE titlu_carte = 'Panza de paianjen')
+);
+--eroare UK, a fost deja scrisa o recenzie de catre acest utilizator pentru aceasta carte
+--unique constraint (RO_A284_SQL_S75.RECENZII_ID_UK) violated
+
+INSERT INTO Recenzii (rating, comentariu, id_utilizator, id_carte)
+VALUES ( 6,'O carte impresionanta',
+  (SELECT id_utilizator FROM Utilizatori WHERE nume = 'Mihaela Munte'),
+  (SELECT id_carte FROM Carti WHERE titlu_carte = 'Orasul Semilunii. Casa Pamantului si a Sangelui')
+);
+--eroare CK, utilizatorul nu poate lasa un rating mai mare decat 5
+--check constraint (RO_A284_SQL_S75.RECENZII_RATING_CK) violated
+
+--Afisez Utilizator + Profil
+
+SELECT
+    u.nume AS nume_utilizator,
+    p.username AS profil_username,
+    p.email AS profil_email
+FROM Utilizatori u
+JOIN Profil_utilizatori p
+    ON u.id_utilizator = p.id_utilizator;
+
+-- Afisez titlul cartii, autorul si genul cartii
+
+SELECT
+    c.titlu_carte AS titlu,
+    a.nume AS autor,
+    g.denumire_gen AS gen
+FROM Carti c
+JOIN Autori a 
+    ON c.id_autor = a.id_autor
+JOIN Genuri g
+    ON c.id_gen = g.id_gen;
+
+
+--Recenziile cartilor si de cine au fost date
+
+SELECT
+    c.titlu_carte AS carte,
+    r.rating,
+    r.comentariu,
+    u.nume AS utilizator
+FROM Recenzii r
+JOIN Carti c 
+    ON r.id_carte = c.id_carte
+JOIN Utilizatori u
+    ON r.id_utilizator = u.id_utilizator;
+
+--Afisez Utilizatorii si titlurile cartilor de pe TBR 
+
+SELECT 
+    u.nume AS utilizator,
+    c.titlu_carte AS "Carte- TBR"
+FROM TBR t
+JOIN Utilizatori u 
+    ON t.id_utilizator = u.id_utilizator
+JOIN Carti c
+    ON t.id_carte = c.id_carte;
+
+
+
+

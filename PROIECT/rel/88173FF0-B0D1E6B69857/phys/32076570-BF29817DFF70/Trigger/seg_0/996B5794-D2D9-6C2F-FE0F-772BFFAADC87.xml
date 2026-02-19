@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="trg_cari_DATA" directorySegmentName="seg_0" id="996B5794-D2D9-6C2F-FE0F-772BFFAADC87">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:29:06 UTC</createdTime>
+<ownerDesignName>PROIECT</ownerDesignName>
+<actions>INSERT, UPDATE</actions>
+<body><![CDATA[BEGIN
+    IF ( :new.data_publicare > SYSDATE)
+    THEN 
+        RAISE_APPLICATION_ERROR ( -20001,
+            'Data invalida: ' || TO_CHAR( :new.data_publicare, 'DD.MM.YYYY HH24:MI:SS' ) || ' trebuie sa fie mai mica decat data curenta.'
+        );
+    END IF;
+END;
+]]></body>
+<triggerTime>BEFORE</triggerTime>
+<table>8AF7ACA4-A712-945A-F1D6-4995A9DD6D60</table>
+</TriggerOraclev10g>

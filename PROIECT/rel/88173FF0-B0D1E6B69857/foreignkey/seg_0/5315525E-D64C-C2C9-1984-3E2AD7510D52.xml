@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="5315525E-D64C-C2C9-1984-3E2AD7510D52" containerWithKeyObject="8AF7ACA4-A712-945A-F1D6-4995A9DD6D60" localFKIndex="083CF46E-66DE-960B-2D14-9E07AE6B5AB8" name="autori_carti_fk">
+<createdBy>User</createdBy>
+<createdTime>2025-12-07 11:25:53 UTC</createdTime>
+<generatorID>A9079E89-7E5F-C3E9-5584-04E34DAE9700</generatorID>
+<ownerDesignName>PROIECT</ownerDesignName>
+<referredTableLongName>Autori</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>B142EA41-ECCD-2898-57E0-5C6D048C581E</referredTableID>
+<keyObject>A105A450-ADAE-BC65-8FD9-452CF4DE58B0</keyObject>
+<referredKeyID>A105A450-ADAE-BC65-8FD9-452CF4DE58B0</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_autor</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
